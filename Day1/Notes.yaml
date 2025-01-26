@@ -1,0 +1,55 @@
+Introduction to JavaScript
+Web Language
+Mocha - LiveScript - JavaScript
+
+Chrome - V8
+Edge - V8 / Chakra (legacy)
+Firefox - SpiderMonkey
+Safari - JScore (Nitro)
+
+ECMA - European Computer Manufacturers Association 
+ES - ECMAScript
+
+Node.js - event driven architecture
+Asynchronous programming
+Non blocking IO operations
+
+interpreted language
+Just In Time compiler
+
+Data types
+1. Primitive data type
+immutable
+x=10
+x --> [10]
+x = 20
+x --> [20]
+
+  - Number
+
+  - String
+
+  - Boolean
+
+  - Undefined
+
+  - Null
+
+2. Non-primitive data type
+mutable
+[10, 20, 40]
+[10, 20, 30, 40]
+
+
+Variable declaration
+1. var (older versions)
+    - Reassignment
+    - Scoping
+    - Hoisting
+2. let
+3. const
+
+
+
+
+

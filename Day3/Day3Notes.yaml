@@ -1,0 +1,73 @@
+📑 Agenda for Week2 Day1 - Get Started with Playwright
+🎯 [ Focus: Kickstart Playwright automation with hands-on basics ]
+ 
+📆 Date: 01 February[Saturday]
+ 
+🕝 Session Highlights
+
+ Recap 
+- Key takeaways from the previous session:  
+Introduction to JavaScript, Mastering Variables, Operators, Conditional Statements&Loops,
+String and Function types.
+
+1️⃣ Live Quiz
+* Conductiong time-boxed Live Quiz 
+- Questions from previous session with multiple choice answers.
+
+
+2️⃣ Understanding Playwright Architecture
+* Core Components and How They Interact  
+
+3️⃣ Browser, Context, and Page
+* Breaking Down the Key Concepts  
+* Real-life Use Cases in Automation  
+
+4️⃣ Code Your First Test Script
+* Hands-on Activity: Writing and Executing a Basic Script  
+
+5️⃣ Understanding the DOM
+* What is the DOM and How It Works  
+
+6️⃣ Locators and Selectors
+* Playwright's getBys Methods
+* Writing Precise and Reliable Locators
+
+🕡 Wrap Up / Q&A 
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+
+Key compenets of playwrights:
+
+1. Browser Instance : Copy of the browser 
+2. Browser Conntext : An isoltaed environment within the browser instance // similar to incognito window
+                    : operate independently with its own cookies , local storage and cache/
+                    : making it possible to run the tests in parallel without sharing the data
+
+3. Page : an indvidual tab or window within the browser context
+          : helps to interact with the web elements
+
+Single  browser instance can have multiple browser contexts [Guest, Personal. Professional]
+Single  browser conetext can have multiple pages [Leaftaps, Salesforce]
+
+
+To create a Playwright test file - filename.spec.ts
+To run the test file - npx playwright test filename.spec.ts
+To open the test report - npx playwright show-report
+
+Default mode - headless
+
+Three levels of configurations :
+1. CLI - Highest priority [execute in command line]
+
+2. Test level configuration (test script)- Higher than the config file [execute using Open in Integrated Terminal]
+If you execute from the root dir, test level configuration will overwrite the playwrite.config.ts properties
+
+3. playwright.config.ts (default configuration) - least priority [execute test from where the config file is present- root die]
+
+Fixtures - Controls the initial setup and teardown process during the test exectution
+
+1. Page fixture
+2. Context fixture.
+3. Request fixture.

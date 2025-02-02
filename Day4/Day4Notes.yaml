@@ -1,0 +1,181 @@
+📑 Agenda for Week 2 Day 2 - Playwright Locators 
+🎯 [ Focus: Mastering Locators for Precise Automation ]  
+
+📆 Date: 02 February[Sunday]  
+
+🕝 Session Highlights
+
+⿡ Recap  
+* Key Takeaways from Week2 Day 1
+
+⿢ Understanding Playwright Locators  
+* Importance of Locators in Automation.  
+* Types of Locators Playwright supports.  
+
+⿤ XPath Selectors
+* Relative vs. Absolute XPath: What's Better?  
+* Practical Use Cases with XPath Examples.
+* Hands-on Example: Using ID, Class, and Attribute Selectors 
+
+⿣ CSS Selectors  
+* Basic and Advanced CSS Selector Techniques.  
+* Hands-on Example: Using ID, Class, and Attribute Selectors.  
+
+⿥ Playwright's getBy Locators
+* Explore getByText, getByRole, getByLabel, and more.  
+* Accessibility-first Automation with getBy Methods.  
+* Real-time Activity: Automating a Login Form.  
+
+⿦ Handling Dropdowns 
+* Techniques for Handling Native and Custom Dropdowns.  
+* Use Case: Selecting Options Dynamically.  
+
+⿧ Configuration File Walkthrough
+* Understanding playwright.config.ts.  
+
+🕡 Wrap Up / Q&A 
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+Xpath -
+
+Absolute Xpath
+
+Relative Xpath
+         - Basic Xpath    --> Attribute Based Xpath, Text Based Xpath, Parital attribute Based Xpath, Partial Text Based Xpath, Collection Based Xpath
+         - Advanced Xpath --Parent to child
+                            Grandparent to child
+                            Child to Parent
+                            GrandChild to GrandParent
+                            Elder Sibling to Younger Sibling
+                            Younger Sibling to Elder Sibling
+                            Elder cousin to Younger cousin
+                            Younger cousin to Elder cousin
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CSS Selectors
+
+1. Type Selector
+tagname <button> 
+page.locator("button").click();
+
+2. Id - #idValue
+page.locator("#username");
+
+3. class - .classValue
+page.locator(".inputLogin").fill("demosalesmanager");
+
+4. Attribute selector - [attributeName = 'attributeValue']
+<input  type="text"  name="USERNAME" size="50">
+page.locator("[name='USERNAME']")
+[type='text']
+[aria-label = 'Amazon.in']
+
+Substring
+Starts with attribute selector
+Select an elememt with an attribute that starts with a specific value
+tagname[attribute^='value']
+
+<div class="inventory_list">
+<div class="inventory_item">
+<div class="inventory_item_img">
+<div class="inventory_item_label">
+
+div[class^='inventory']
+page.locator("div[class^='inventory']")
+id='submit_button_743'
+
+Ends with attribute selector
+Select an element with an attribute that ends with a specific value
+tagname[attribute$='value']
+<button class="btn_primary btn_inventory">ADD TO CART</button>
+<button class="btn_secondary btn_inventory">ADD TO CART</button>
+<button class="btn btn_inventory">ADD TO CART</button>
+page.locator("button[class$='btn_inventory']")
+
+Contains attribute selector
+Select an element with an attribute containing a specific substring
+tagname[attribute*='value']
+button[class*='btn']
+
+5. Descendant Combinator
+ancestor descendat
+form input
+
+6. Child Combinator
+parent>child
+p>input
+
+7. Adjacent sibling combinator
+element+adjacent
+
+8. General sibling combintor
+element~sibling
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Playwright getBys
+
+1. getByRole() - to locate a web element by its role (button, link, checkbox, alert)
+
+await page.getByRole('button', {name: "Show"}).click();
+
+2. getByText() - to locate a web element by the text content
+await page.getByText("Show").click();
+
+3.getByLabel() - to locate a web element by the label's text
+await page.getByLabel("Username").fill("demosalesmanager");
+
+4. getByPlaceholder() - to locate an input by its placeholder value
+
+5. getByAltText() - to locate a web element by its images/logos (text alternatives)
+
+await page.getByAltText("Playwright logo").isVisible();
+
+6. getByTitle() - to locate a web element by its title attribute
+
+<span title = "Sign In">
+page.title()
+
+7. getByTestId() - to locate a web element based on its data-testid attribute
+page.getByTestId("overlay").click();
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+Handling dropdown
+
+1. select tag
+<select id="">
+  <option value = "option1"> Option1 </option>
+  <option value= "option2"> Option2 </option>
+
+//selectOption method//
+
+1. Select by value
+<select id ="category-filter">
+  <option value="101">Electronics</option>
+  <option value="102">Books</option>
+  <option value="103">Bags</option>
+  <option value="104">Clothing</option>
+
+2. Select by label 
+
+3. Select by index
+
+2. non-select tag - div, ul
+1. Locate the dropdown - click /enter the value
+2. Locate the particular option from the dropdown list - click it
+<div id = "#custom-dropdown">
+  <div class = " "> Option 1</div>
+  <div class = " "> Option 2</div>
+  <div class = " "> Option 3</div>
+
+Multiple matches - nth(i) 
+nth(0) - 1st element
+nth(1) - 2nd element
+nth(2) - 3nd element
+
+
+ 

@@ -1,0 +1,107 @@
+📑 Agenda for Week 3 Day 1: TypeScript Fundamentals
+🎯 [ Focus: Mastering the basics of TypeScript with a foundation in JavaScript concepts ]  
+
+📆 Date: 08 February [Saturday]
+
+🕝 Session Highlights
+
+⿡ Recap
+   - Key Takeaways from Week2 Day 04. 
+ * Understanding Playwright Architecture,About Browser, Context and Page
+ * CSS Selectors, XPath Selectors and Playwright's getBy Locators
+
+Live Quiz
+* Conducting time-boxed Live Quiz 
+- Questions from previous session with multiple choice answers.
+
+⿢ Understanding Arrays in JavaScript  
+* Basics of Arrays: What and Why?  
+* Common Methods and Operations on Arrays.  
+
+⿣ Promises in JavaScript
+* Asynchronous Programming: Callbacks vs. Promises.  
+* Anatomy of a Promise: States and Methods (then, catch).  
+* Real-world Use Case: Fetching Data Using Promises.  
+
+⿤ Introduction to TypeScript
+* What is TypeScript, and Why Use It?  
+* Setting Up a TypeScript Environment.  
+* Basic Syntax and First TypeScript Program.  
+
+⿥ TypeScript Types  
+* Overview of Types in TypeScript:  
+* Hands-on: Declaring Variables with Different Types.  
+
+⿦ Explicit Types & Annotations 
+* Why Use Type Annotations?  
+* Explicitly Defining Function Parameters and Return Types.  
+* Examples:  
+     * Using Annotations with Arrays, Objects, and Functions.  
+     * Type Inference vs. Explicit Types.  
+
+🕡 Wrap Up / Q&A
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+
+Arrays :
+Array is a special type of object used to store multiple values in a single variable.
+JavaScript Arrays can hold a collection of different datatypes , includes number, string, object and even other arrays.
+
+1. Dynamic
+2. Heterogenous elements
+
+Using Array Literal
+
+let CompanyName=["Testleaf", "Qeagle","TCS"]
+
+Using Array constructor
+
+let numbers = new Array(5); //Create an array with  empty [<5 empty items>]
+
+let numbers = new Array(21,13,54,27,64)
+
+let emptyArrays=[];
+
+TypeScript
+
+Superset of JavaScript
+Static typing
+
+Global installation :
+npm install -g typescript
+
+Local installation
+npm install typescript --save-dev
+
+To check the version --> tsc --version
+
+To run a .ts file --> 
+
+tsc filename.ts
+node filename.js
+
+To run ts file directly : npm install -g ts-node
+ts-node filename.ts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

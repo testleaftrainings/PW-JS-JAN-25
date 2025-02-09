@@ -1,0 +1,148 @@
+📑 Agenda for Week 3 Day 2: TypeScript Key Features 
+ 
+🎯 [Focus: Deep Dive into TypeScript’s Advanced Features]  
+
+📆 Date: 09 February [Sunday]  
+
+🕝 Session Highlights  
+
+⿡ Recap  
+* Key takeaways from previous sessions.  
+
+⿣ Object Literals  
+* Defining and using object types in TypeScript. 
+
+⿢ Type Aliases  
+* What are Type Aliases and why use them?  
+* Syntax and examples.   
+ 
+
+⿤ Type Assertion  
+* What is Type Assertion?  
+* Examples: Converting unknown types.  
+
+⿥ Enums  
+* Understanding Enums: Numeric and String Enums.  
+
+⿦ Optional & Default Parameters  
+* Adding flexibility to functions with optional parameters.  
+* Setting default values for parameters.  
+
+🕡 Wrap Up / Q&A  
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+Object Literals
+
+It is a key value pair
+
+You can create an object using curly braces using key value pair . It is called so because you are literally assigning the value using key value pair.
+
+
+keys - strings
+value - any datatypes
+
+Example 
+
+const objectName ={
+
+key1 = value1,
+key2 = value2,
+key3 = value3
+}
+
+Example 
+
+const selectors = {
+usernameField : "input[#username]",
+passwordField : "input[#password]"
+loginButton : "#Login"
+
+}
+
+For the purpose of reusablity of the code in you Page Object Model
+
+How to call this value in your code?
+
+1. Dot Notation
+
+objectName.key
+
+page.locator(selectors.usernameField).fill("demosalesemanager");
+
+or page.fill(selectors.usernameField,"demosalesemanager")
+
+2. Square Bracket notation
+
+When you have a dynamic value you can go for Square Bracket notation or during run time.
+Also when you have special characters.
+
+//How to use object literal in TypeScript :
+
+You will mention the datatype of the keys 
+
+let objectName ={
+key1 : datatype,
+key2 : datatype
+
+} = {
+key1 = value1,
+key2 = value2
+
+}
+
+what is Type Aliases?
+
+Its is an alternate name for an original name. 
+Similarly in TypeScript a term called Type aliases.
+
+type StringorNumber = string | number | bollean
+
+Union Type
+
+In union type you can take one of the several values. Symbol used |
+
+Example 
+
+type BrowserAction = 'navigate'|'click'|'hover'|'type'
+
+const performAction = (action : BrowserAction) =>{
+switch(action){
+case:'click':
+concole.log("Performing click Action")
+}
+}
+
+
+Intersection Type 
+
+In intersection combining multiple type in to a single type. The symbol used is &
+
+example : type typeName = type1&type2&type3
+
+Type Assertion
+
+The response that you receive from the server can't be infered hence we are using Type Assertion.
+
+Example value that comes from a server
+
+Compiler will infer any but you will overide the TypeScript Inference.
+
+Purely compile  time feature for providing more info to TypeScript compiler.
+
+
+What is an Enum
+
+Special "type" in TypeScript that will allow to define a set of named constant.
+
+Example : Days in a week 
+
+Types of Enum :
+
+1. Numeric enums (By default enum)
+
+enum Status {
+Active,
+Inactive,
+Suspended
+}

@@ -1,0 +1,26 @@
+
+
+Auto - waiting
+
+Actionability checks:
+
+1. Visibility
+2. Stability
+3. Receive events
+4. Enabled
+5. Editable
+
+.click({force:true})
+
+iframe - inline frame
+Methods to intract with the frames :
+
+1. page.frame - simple and straightforward
+
+-id/name
+-url
+-index
+
+
+2. page.frameLocator
+efficient , complex scenarios / nested iframes

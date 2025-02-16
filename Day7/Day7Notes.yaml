@@ -1,0 +1,150 @@
+📑 Agenda for Week 4 Day 1: Dig Deeper into Playwright  
+
+🎯 [ Focus: Mastering advanced concepts in Playwright for effective automation testing ]  
+
+📆 Date: 15 February [Saturday]  
+
+🕝 Session Highlights  
+
+⿡ Recap  
+* Quick review of key learnings from previous TypeScript class Type Aliases, Object Literals, Type Assertion, Enums.
+   
+⿢ Playwright Configuration File Walkthrough  
+* Understanding the file structure.  
+* Key properties: Test directory, retries, timeout, projects, and reporters.  
+* Environment-specific configurations: Defining base URL, browser options, and test setup.  
+
+⿣ Assertions Using the 'expect' Library  
+* Commonly used assertions and their applications.   
+
+⿤ Auto-Waiting in Playwright  
+* What is auto-waiting, and why is it essential?  
+* Differences between manual waits and auto-waiting.  
+* Examples: Handling dynamic elements without flaky tests.  
+
+⿥ Handling Dropdowns  
+* Understanding dropdown types: 'select' tags and custom dropdowns.  
+* Selecting options by value, label, or index.   
+
+⿦ Alerts Handling  
+* Understanding Playwright’s support for JavaScript alerts, prompts, and confirmations.  
+* Automating acceptance or dismissal of alerts.  
+* Examples: Validating alert messages in applications.  
+
+🕡 Wrap Up / Q&A  
+
+📝 Keep your physical notebook and pen handy to sketch out ideas!
+
+
+Handling drop down:
+
+1. select tag
+
+1. Select by value
+
+<select id = "category-filter">
+<option value = "101"> Electronics</option> 
+<option value = "102"> Sports</option>
+<option value = "103"> Bags</option>
+<option value = "104"> clothes</option>
+
+2. Select by label
+
+
+3. Select by index
+
+
+2. non-select tag - div, ul, li
+
+
+timeout in Playwright :
+
+1. test execution time of a test script - timeout : 30000(default timeout in Playwright)
+2. Global timeout : Execution time of your whole test suit.
+3. Assertion timeout : 5000 ms 
+
+expect :{
+timeout : 150000
+}
+4. Action timeout :30000 ms 
+
+
+Assertion :
+-Conditon that validate the expected state of an application during exection
+-Built in assertion - expect library and has a lot of methods.
+
+1. Generic Assertions
+
+toBe, toEqual, toBeGreaterThan, toContain, toContainEqual, toBeTruthy
+
+2. Locator Assertions-
+Assserting the locators
+
+toBeVisible, toBeEnabled, toHaveAttribute
+
+3. Page Assertions
+
+toHaveTitle, toHaveUrl
+
+4. Snapshot Assertions
+
+When you just want to asert the snapshot then you can go for snapshot assertion
+
+5. API reference assertions
+
+When ever there ia na API reponse you can use API reference assertion
+
+Assertion types based on fuctionality :
+
+1. Auto retry assertion
+
+defaut assertion timeout is 5000 ms
+
+1000 ms
+1000 ms
+1000 ms
+1000 ms
+1000 ms
+
+2. Non-retry assertion
+
+toContain, toBe , 
+
+Assertion also classified as :
+
+Hard assert 
+Soft assert
+
+Alert 
+
+Types of alert :
+
+1. Modal alert :
+
+a. Simple alert
+- A messge + ok button
+
+
+b. Confirm alert
+- message + accept or dimiss button 
+
+c. Prompt alert
+- It gets the user input.
+- message + accept or dimiss button 
+
+d. Before Unload Alert
+
+
+2. Non Modal alert
+(Sweet alert)
+
+- you can inspect the alert
+- You have to handle the alert
+
+Methods to interact with alert:
+
+1. accept()
+2. dismiss()
+3. message()
+4. type()
+

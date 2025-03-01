@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "a2a2e060-ce3b-4d52-ba94-7268e1e3d208",
+		"name": "Salesforce_Jan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23239426"
+	},
+	"item": [
+		{
+			"name": "Generate Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "3MVG95mg0lk4bathv4oYb772GRC3bVxW1Es_Q3iIRRNR8SK5ApA.LJbPT96HpWJInRGniHTbF.cUq2.uJatoV",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "149569A62384820C94E7FCB265BEFEC659DE02AD4E4D4BAEE95A354329BCD654",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "vidyar@testleaf.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Sales@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://login.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"login",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Lead",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"lastname\":\"Rohith\",\r\n    \"company\":\"Flipkart\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v62.0/sobjects/Lead",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v62.0",
+						"sobjects",
+						"Lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update lead data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"firstname\":\"R\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v62.0/sobjects/Lead/00QJ2000004B18KMAS",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v62.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000004B18KMAS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v58.0/sobjects/Lead/00QJ2000004B18KMAS",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v58.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000004B18KMAS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Specific Lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 00D5h0000098pgR!AQwAQFYmtjpEmDXOOsEJ51e4YsHJOIC6UwfkM0d7jRln8ZFLWbyWxUhhl1dXrxcmg7j5Lq9CMMGLkeiZP3xITb5XkWko2PUG",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://testleaf-da-dev-ed.develop.my.salesforce.com/services/data/v58.0/sobjects/Lead/00QJ2000004B18KMAS",
+					"protocol": "https",
+					"host": [
+						"testleaf-da-dev-ed",
+						"develop",
+						"my",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v58.0",
+						"sobjects",
+						"Lead",
+						"00QJ2000004B18KMAS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SF API  Endpoints",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Parse the response body\r",
+							"const response = pm.response.json();\r",
+							"//console.log(response)\r",
+							"// Initialize an array to store the URLs\r",
+							" const sobjectUrls = response.sobjects.map(obj => obj.urls.sobject);\r",
+							"\r",
+							"// sobjects[57].urls.sobject\r",
+							"\r",
+							"// // // Log the URLs to the console\r",
+							"console.log(sobjectUrls);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{SF_acTK}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{SF_acTK}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SF_URL}}/services/data/v62.0/sobjects",
+					"host": [
+						"{{SF_URL}}"
+					],
+					"path": [
+						"services",
+						"data",
+						"v62.0",
+						"sobjects"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

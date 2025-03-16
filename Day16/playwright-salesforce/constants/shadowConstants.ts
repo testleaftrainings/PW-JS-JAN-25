@@ -1,0 +1,1 @@
+type shadowLocator = "text" | "testId" | "label" | "role" | "placeholder" | "title";

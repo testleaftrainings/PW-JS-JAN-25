@@ -1,0 +1,570 @@
+{
+  "config": {
+    "configFile": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\playwright.config.ts",
+    "rootDir": "C:/Playwright Workspace/Salesforce Framework/playwright-salesforce-april/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\auth\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/report.json"
+        }
+      ],
+      [
+        "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "detail": true,
+          "outputFolder": "my-allure-results",
+          "suiteTitle": false
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Playwright Workspace/Salesforce Framework/playwright-salesforce-april/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Playwright Workspace/Salesforce Framework/playwright-salesforce-april/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.45.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fixtures\\createServiceAccount.spec.ts",
+      "file": "fixtures/createServiceAccount.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Data driven tests for Salesforce account creation",
+          "file": "fixtures/createServiceAccount.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Test with csv data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [
+                    {
+                      "type": "author",
+                      "description": "Ranjini"
+                    },
+                    {
+                      "type": "test-case",
+                      "description": "Data driven tests for Salesforce account creation"
+                    },
+                    {
+                      "type": "test-start",
+                      "description": "Starting test with CSV data"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 22834,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Loading environment variables from: C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\data\\service.env\n"
+                        },
+                        {
+                          "text": "Environment variable Menu: Service\n"
+                        },
+                        {
+                          "text": "Environment variable SubMenu: Service\n"
+                        },
+                        {
+                          "text": "Environment variable AccountName: Testleaf\n"
+                        },
+                        {
+                          "text": "Environment variable AccountNumber: 87645273989\n"
+                        },
+                        {
+                          "text": "Environment variable Type: Customer - Direct\n"
+                        },
+                        {
+                          "text": "Environment variable Industry: Banking\n"
+                        },
+                        {
+                          "text": "Environment variable Rating: Warm\n"
+                        },
+                        {
+                          "text": "Loaded environment data: {\n  Menu: \u001b[32m'Service'\u001b[39m,\n  SubMenu: \u001b[32m'Service'\u001b[39m,\n  AccountName: \u001b[32m'Testleaf'\u001b[39m,\n  AccountNumber: \u001b[32m'87645273989'\u001b[39m,\n  Type: \u001b[32m'Customer - Direct'\u001b[39m,\n  Industry: \u001b[32m'Banking'\u001b[39m,\n  Rating: \u001b[32m'Warm'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "The App Launcher Toggle Button is clicked",
+                          "duration": 5157
+                        },
+                        {
+                          "title": "The View All Link is clicked",
+                          "duration": 1962
+                        },
+                        {
+                          "title": "Testbox Search apps or items filled with Service",
+                          "duration": 1563
+                        },
+                        {
+                          "title": "The Menu Link is clicked",
+                          "duration": 852
+                        },
+                        {
+                          "title": "The Accounts Link is clicked",
+                          "duration": 3580
+                        },
+                        {
+                          "title": "The New Button is clicked",
+                          "duration": 1855
+                        },
+                        {
+                          "title": "Testbox Account Name filled with 87645273989",
+                          "duration": 3279
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 479
+                        },
+                        {
+                          "title": "The Industry Dropdown is clicked",
+                          "duration": 305
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 274
+                        },
+                        {
+                          "title": "The Rating Dropdown is clicked",
+                          "duration": 273
+                        },
+                        {
+                          "title": "The Save Button is clicked",
+                          "duration": 382
+                        }
+                      ],
+                      "startTime": "2024-07-06T18:57:09.903Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-742ed-creation-Test-with-csv-data-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-742ed-creation-Test-with-csv-data-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-742ed-creation-Test-with-csv-data-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "babc58c3f4beb4926807-b023d398396bc55971c2",
+              "file": "fixtures/createServiceAccount.spec.ts",
+              "line": 55,
+              "column": 9
+            },
+            {
+              "title": "Test with env data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [
+                    {
+                      "type": "author",
+                      "description": "Ranjini"
+                    },
+                    {
+                      "type": "test-case",
+                      "description": "Data driven tests for Salesforce account creation"
+                    },
+                    {
+                      "type": "test-start",
+                      "description": "Starting test with environment data"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 26606,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Using environment data: {\n  Menu: \u001b[32m'Service'\u001b[39m,\n  SubMenu: \u001b[32m'Service'\u001b[39m,\n  AccountName: \u001b[32m'Testleaf'\u001b[39m,\n  AccountNumber: \u001b[32m'87645273989'\u001b[39m,\n  Type: \u001b[32m'Customer - Direct'\u001b[39m,\n  Industry: \u001b[32m'Banking'\u001b[39m,\n  Rating: \u001b[32m'Warm'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "The App Launcher Toggle Button is clicked",
+                          "duration": 7677
+                        },
+                        {
+                          "title": "The View All Link is clicked",
+                          "duration": 2515
+                        },
+                        {
+                          "title": "Testbox Search apps or items filled with Service",
+                          "duration": 1643
+                        },
+                        {
+                          "title": "The Menu Link is clicked",
+                          "duration": 841
+                        },
+                        {
+                          "title": "The Accounts Link is clicked",
+                          "duration": 5673
+                        },
+                        {
+                          "title": "The New Button is clicked",
+                          "duration": 2276
+                        },
+                        {
+                          "title": "Testbox Account Name filled with Testleaf",
+                          "duration": 2152
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 503
+                        },
+                        {
+                          "title": "The Industry Dropdown is clicked",
+                          "duration": 240
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 336
+                        },
+                        {
+                          "title": "The Rating Dropdown is clicked",
+                          "duration": 264
+                        },
+                        {
+                          "title": "The Save Button is clicked",
+                          "duration": 277
+                        }
+                      ],
+                      "startTime": "2024-07-06T18:57:35.077Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-f9e97-creation-Test-with-env-data-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-f9e97-creation-Test-with-env-data-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-f9e97-creation-Test-with-env-data-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "babc58c3f4beb4926807-9d6aebafa7b88ea43548",
+              "file": "fixtures/createServiceAccount.spec.ts",
+              "line": 78,
+              "column": 9
+            },
+            {
+              "title": "Test with excel data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [
+                    {
+                      "type": "author",
+                      "description": "Ranjini"
+                    },
+                    {
+                      "type": "test-case",
+                      "description": "Data driven tests for Salesforce account creation"
+                    },
+                    {
+                      "type": "test-start",
+                      "description": "Starting test with Excel data"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 22624,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "The App Launcher Toggle Button is clicked",
+                          "duration": 5954
+                        },
+                        {
+                          "title": "The View All Link is clicked",
+                          "duration": 2168
+                        },
+                        {
+                          "title": "Testbox Search apps or items filled with Service",
+                          "duration": 1579
+                        },
+                        {
+                          "title": "The Menu Link is clicked",
+                          "duration": 741
+                        },
+                        {
+                          "title": "The Accounts Link is clicked",
+                          "duration": 3374
+                        },
+                        {
+                          "title": "The New Button is clicked",
+                          "duration": 2861
+                        },
+                        {
+                          "title": "Testbox Account Name filled with Testleaf",
+                          "duration": 1725
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 572
+                        },
+                        {
+                          "title": "The Industry Dropdown is clicked",
+                          "duration": 259
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 252
+                        },
+                        {
+                          "title": "The Rating Dropdown is clicked",
+                          "duration": 240
+                        },
+                        {
+                          "title": "The Save Button is clicked",
+                          "duration": 291
+                        }
+                      ],
+                      "startTime": "2024-07-06T18:58:02.712Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-04d49-eation-Test-with-excel-data-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-04d49-eation-Test-with-excel-data-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-04d49-eation-Test-with-excel-data-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "babc58c3f4beb4926807-3651ef45ba082fbd56bc",
+              "file": "fixtures/createServiceAccount.spec.ts",
+              "line": 100,
+              "column": 9
+            },
+            {
+              "title": "Test with JSON data",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 300000,
+                  "annotations": [
+                    {
+                      "type": "author",
+                      "description": "Ranjini"
+                    },
+                    {
+                      "type": "test-case",
+                      "description": "Data driven tests for Salesforce account creation"
+                    },
+                    {
+                      "type": "test-start",
+                      "description": "Starting test with JSON data"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 22073,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "The App Launcher Toggle Button is clicked",
+                          "duration": 6094
+                        },
+                        {
+                          "title": "The View All Link is clicked",
+                          "duration": 2128
+                        },
+                        {
+                          "title": "Testbox Search apps or items filled with Service",
+                          "duration": 2319
+                        },
+                        {
+                          "title": "The Menu Link is clicked",
+                          "duration": 293
+                        },
+                        {
+                          "title": "The Accounts Link is clicked",
+                          "duration": 3186
+                        },
+                        {
+                          "title": "The New Button is clicked",
+                          "duration": 1801
+                        },
+                        {
+                          "title": "Testbox Account Name filled with Testleaf",
+                          "duration": 1969
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 484
+                        },
+                        {
+                          "title": "The Industry Dropdown is clicked",
+                          "duration": 532
+                        },
+                        {
+                          "title": "The None Dropdown is clicked",
+                          "duration": 311
+                        },
+                        {
+                          "title": "The Rating Dropdown is clicked",
+                          "duration": 367
+                        },
+                        {
+                          "title": "The Save Button is clicked",
+                          "duration": 239
+                        }
+                      ],
+                      "startTime": "2024-07-06T18:58:27.231Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-825fc-reation-Test-with-JSON-data-chromium\\test-finished-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-825fc-reation-Test-with-JSON-data-chromium\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Playwright Workspace\\Salesforce Framework\\playwright-salesforce-april\\test-results\\fixtures-createServiceAcco-825fc-reation-Test-with-JSON-data-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "babc58c3f4beb4926807-de7129557d0ec605be1e",
+              "file": "fixtures/createServiceAccount.spec.ts",
+              "line": 123,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-07-06T18:56:58.322Z",
+    "duration": 113529.17199999999,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

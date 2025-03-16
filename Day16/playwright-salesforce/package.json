@@ -1,0 +1,32 @@
+{
+  "name": "playwright-salesforce-april",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "report:generate": "allure generate allure-results --clean -o allure-report",
+    "report:open": "allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/jsonfile": "^6.1.4",
+    "@types/node": "^20.14.8",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^3.0.0-beta.5"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "axios": "^1.7.2",
+    "csv": "^6.3.9",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "jira-client": "^8.2.2",
+    "jsonfile": "^6.1.0",
+    "playwright": "^1.45.1",
+    "xlsx": "^0.18.5"
+  }
+}

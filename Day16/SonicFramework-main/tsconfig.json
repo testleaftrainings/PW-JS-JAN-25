@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": ["**/*.ts", "tests/Instructor/TC091_To_create_Completed_Course.spec.ts (Do not Run)", "tests/Instructor/TC090_To_create_Completed_Course.spec.ts(Do not Run)", "tests/Collaboration-Hub/TC095_Verify_abletorecommend_the_courses_to_users.spec.ts"]
+}

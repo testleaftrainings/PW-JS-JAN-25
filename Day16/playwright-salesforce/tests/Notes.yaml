@@ -1,0 +1,86 @@
+Best Practices to design a framework
+1. Modularity
+2. Configuration Management
+3. Error Handling
+4. Documentation
+5. Scalability
+6. Security
+
+1. Create a new workspace
+2. Initialize Playwright - npm init playwright@latest
+3. Enable Gitflow actions
+4. Organize the project structure
+    Step 1: Create the pages
+              Constructor - initialize the pages
+    Step 2: Create a test file for a particular module
+        Create objects to call the methods from the pages
+
+    github
+    node-modules
+    pages
+      LoginPage.ts - export class
+        constructor(page: Page) {
+          this.page = page
+        }
+        enterUsername()
+        enterPassword()
+        clickLogin()
+      HomePage.ts
+      ServicePage.ts
+    tests
+      createAccount.spec.ts
+        const login = new LoginPage(page);
+    package.json
+    package-lock.json
+    playwright.config.ts
+Initialize the tsconfig file --> tsc --init
+
+Step 3: Create a wrapper class
+    utils
+      playwright.ts - export abstract PlaywrightWrapper
+      Write wrapper methods for all the actions that you do on the page
+
+Step 4: Extend the wrapper class to all the pages
+        Override the constructor by using super keyword
+        Designing the actions on that page using wrapper methods
+
+Step 5: You can move the constants and app data to separate folders
+        constants
+        urlConstants (enum)
+
+Step 6: Write a basic test file
+Step 7: Add custom fixtures
+        customFixtures
+          salesforceFixture.ts
+Step 8: Add retry logic
+Step 9: Add custom reporters
+        reporter.ts
+        Configure allure report
+        npm i allure-playwright
+        allure generate my-allure-results -o allure-report --clean
+        allure open allure-report
+
+Step 10: Integrate APIs
+        api
+        test--> api
+
+Step 11: Data Parameterization
+        .env, .csv, .json, .xlsx
+        read the data from the file
+        writing the data into the file
+        data
+            csv - npm install csv-parsee
+            json - npm install jsonfile
+            xlsx - npm install xlsx
+            env - npm install dotenv
+
+        dataUtility
+        Add Faker
+        random data
+
+Step 12: Jira Integration
+Step 13: Declare the test information, hooks, annotations
+          You can prefer global-setup (config file - path of the .ts)
+          auth --> global-setup.ts (instead of using test.use)
+
+

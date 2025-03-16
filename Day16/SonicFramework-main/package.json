@@ -1,0 +1,38 @@
+{
+  "name": "expertus_one_playwright",
+  "version": "1.0.0",
+  "description": "Playwright Automation for Expertus One",
+  "main": "index.js",
+  "scripts": {
+    "posttest": "npx ts-node -r dotenv/config ./jira/log-a-defect.ts"
+  },
+  "keywords": [],
+  "author": "Qeagle",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.10.6",
+    "@types/pg": "^8.11.6",
+    "@types/video.js": "^7.3.58"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "axios": "^1.6.8",
+    "csv-parse": "^5.5.6",
+    "csv-parser": "^3.0.0",
+    "date-fns": "^3.6.0",
+    "dotenv": "^16.4.5",
+    "glob": "^11.0.0",
+    "jira-client": "^8.2.2",
+    "jsdom": "^24.1.0",
+    "mailslurp-client": "^15.20.2",
+    "mysql2": "^3.10.2",
+    "pg": "^8.12.0",
+    "playwright": "^1.43.1",
+    "typescript": "^5.5.4",
+    "video.js": "^8.18.1",
+    "videojs-ads": "^0.1.0",
+    "videojs-contrib-ads": "^7.5.2",
+    "xlsx": "^0.18.5"
+  }
+}
